@@ -64,72 +64,194 @@ if (bgCanvas && bgCtx) {
 
 // ---------------- QUESTION SETS ----------------
 var beginnerQuestions = [
-  { q:"Which keyword declares a variable in JavaScript?", options:["const","let","var","All of the above"], answer:3 },
-  { q:"How do you write a single-line comment?", options:["<!-- -->","# comment","// comment","/* comment */"], answer:2 },
-  { q:"What is the type of 'Hello'?", options:["String","Number","Boolean","Object"], answer:0 },
-  { q:"Which operator is used for assignment?", options:["==","=","===","=>"], answer:1 },
-  { q:"What does console.log() do?", options:["Prints to console","Opens console","Alerts page","Closes console"], answer:0 },
-  { q:"Which terminates a statement usually?", options:[";","|",",","."], answer:0 },
-  { q:"Which converts a string to integer?", options:["Number()","parseInt()","toInteger()","parse()"], answer:1 },
-  { q:"What is NaN short for?", options:["Not a Number","Null and Null","Name and Number","No a Number"], answer:0 },
-  { q:"Which method adds to end of array?", options:["pop()","push()","shift()","unshift()"], answer:1 },
-  { q:"How to check type of a variable?", options:["typeOf","typeof","getType","typeof()"], answer:1 },
-  { q:"Which is falsy value?", options:["1","'0'","0","'false'"], answer:2 },
-  { q:"How to declare a function named f?", options:["function f(){}","def f(){}","func f(){}","f function(){}"], answer:0 },
-  { q:"Which is used to create objects?", options:["{}","[]","()","<>"], answer:0 },
-  { q:"What does === check?", options:["Value only","Type only","Value and type","Reference"], answer:2 },
-  { q:"Which converts object to JSON string?", options:["JSON.parse","JSON.stringify","toJSON","toString"], answer:1 },
-  { q:"Which gets length of array a?", options:["a.len","a.length","length(a)","a.size"], answer:1 },
-  { q:"Which loops over array elements?", options:["for","foreach","while","for...of"], answer:3 },
-  { q:"Which accesses first array element a?", options:["a[0]","a.first","a(0)","a.get(0)"], answer:0 },
-  { q:"Which method removes first element?", options:["pop()","shift()","splice(0,1)","slice(1)"], answer:1 },
-  { q:"Which keyword prevents reassignment?", options:["let","const","var","static"], answer:1 }
+  { 
+    q:"Which keyword declares a variable in JavaScript?",
+     options:["const","let","var","All of the above"], 
+     answer:3 },
+  {
+     q:"How do you write a single-line comment?",
+      options:["<!-- -->","# comment","// comment","/* comment */"], answer:2  },
+  {
+     q:"What is the type of 'Hello'?", 
+     options:["String","Number","Boolean","Object"], 
+     answer:0 },
+  {
+     q:"Which operator is used for assignment?", 
+     options:["==","=","===","=>"], answer:1 },
+  {
+     q:"What does console.log() do?",
+      options:["Prints to console","Opens console","Alerts page","Closes console"], answer:0 },
+  { 
+    q:"Which terminates a statement usually?",
+     options:[";","|",",","."], answer:0 },
+  {
+     q:"Which converts a string to integer?", 
+     options:["Number()","parseInt()","toInteger()","parse()"], answer:1 },
+  {
+     q:"What is NaN short for?", 
+     options:["Not a Number","Null and Null","Name and Number","No a Number"], answer:0 },
+  {
+     q:"Which method adds to end of array?", 
+     options:["pop()","push()","shift()","unshift()"], answer:1 },
+  {
+     q:"How to check type of a variable?",
+      options:["typeOf","typeof","getType","typeof()"], answer:1 },
+  {
+     q:"Which is falsy value?",
+      options:["1","'0'","0","'false'"], answer:2 },
+  {
+     q:"How to declare a function named f?",
+      options:["function f(){}","def f(){}","func f(){}","f function(){}"], answer:0 },
+  {
+     q:"Which is used to create objects?",
+      options:["{}","[]","()","<>"], answer:0 },
+  {
+     q:"What does === check?", 
+     options:["Value only","Type only","Value and type","Reference"], answer:2 },
+  {
+     q:"Which converts object to JSON string?",
+      options:["JSON.parse","JSON.stringify","toJSON","toString"], answer:1 },
+  {
+     q:"Which gets length of array a?", 
+     options:["a.len","a.length","length(a)","a.size"], answer:1 },
+  {
+     q:"Which loops over array elements?",
+      options:["for","foreach","while","for...of"], answer:3 },
+  {
+     q:"Which accesses first array element a?", 
+     options:["a[0]","a.first","a(0)","a.get(0)"], answer:0 },
+  {
+     q:"Which method removes first element?", 
+     options:["pop()","shift()","splice(0,1)","slice(1)"], answer:1 },
+  {
+     q:"Which keyword prevents reassignment?",
+      options:["let","const","var","static"], answer:1 }
 ];
 
 var intermediateQuestions = [
-  { q:"What will console.log(typeof typeof 1) print?", options:["'number'","'string'","'object'","'undefined'"], answer:1 },
-  { q:"What is a closure?", options:["Function that returns another function","Function with access to outer scope","A loop pattern","A type of object"], answer:1 },
-  { q:"What does Array.from('abc') return?", options:["['a','b','c']","'abc'","['abc']","undefined"], answer:0 },
-  { q:"Which method filters elements?", options:["map()","filter()","reduce()","forEach()"], answer:1 },
-  { q:"What does Object.assign({}, obj) do?", options:["Deep clone","Shallow copy properties","Delete properties","Freeze object"], answer:1 },
-  { q:"What does Promise.all([...]) return?", options:["First resolved","Promise that resolves when all resolve","Array immediately","Undefined"], answer:1 },
-  { q:"Which operator spreads elements?", options:["..","...",".","spread()"], answer:1 },
-  { q:"Which returns index of item or -1?", options:["find()","filter()","indexOf()","includes()"], answer:2 },
-  { q:"What does 'use strict' do?", options:["No difference","Enables stricter parsing/runtime checks","Disables JS","Makes code faster"], answer:1 },
-  { q:"Which converts string to number safely?", options:["+str","Number(str)","parseInt(str)","All of the above"], answer:3 },
-  { q:"What value typeof null returns?", options:["'null'","'object'","'undefined'","'value'"], answer:1 },
-  { q:"How to create an arrow function?", options:["() => {}", "function => {}", "=> function {}", "fn => ()"], answer:0 },
-  { q:"Which array method returns a single value?", options:["map()","filter()","reduce()","forEach()"], answer:2 },
-  { q:"What does event delegation help with?", options:["Performance by using single handler on parent","Makes events async","Copies events","Stops events"], answer:0 },
-  { q:"What is the purpose of try/catch?", options:["Looping","Error handling","Variable declaration","Promise resolution"], answer:1 },
-  { q:"What does JSON.parse do?", options:["Parse JSON string to object","Stringify object","Clone object","Validate JSON only"], answer:0 },
-  { q:"Which method checks if array contains value?", options:["indexOf()","includes()","find()","some()"], answer:1 },
-  { q:"Which keyword creates block scope?", options:["var", "let","function","const"], answer:1 },
-  { q:"What is hoisting in JS?", options:["Variables and functions moved to top of scope at runtime","IO operation","Network request","Compiler optimization"], answer:0 },
-  { q:"Which creates generator function?", options:["function* name() {}", "async function name() {}", "gen function() {}", "function^ name() {}"], answer:0 }
+  {
+     q:"What will console.log(typeof typeof 1) print?",
+      options:["'number'","'string'","'object'","'undefined'"], answer:1 },
+  {
+     q:"What is a closure?",
+      options:["Function that returns another function","Function with access to outer scope","A loop pattern","A type of object"], answer:1 },
+  {
+     q:"What does Array.from('abc') return?", 
+     options:["['a','b','c']","'abc'","['abc']","undefined"], answer:0 },
+  {
+     q:"Which method filters elements?",
+      options:["map()","filter()","reduce()","forEach()"], answer:1 },
+  {
+     q:"What does Object.assign({}, obj) do?",
+      options:["Deep clone","Shallow copy properties","Delete properties","Freeze object"], answer:1 },
+  {
+     q:"What does Promise.all([...]) return?",
+      options:["First resolved","Promise that resolves when all resolve","Array immediately","Undefined"], answer:1 },
+  { 
+    q:"Which operator spreads elements?", 
+    options:["..","...",".","spread()"], answer:1 },
+  { 
+    q:"Which returns index of item or -1?",
+     options:["find()","filter()","indexOf()","includes()"], answer:2 },
+  { 
+    q:"What does 'use strict' do?", 
+    options:["No difference","Enables stricter parsing/runtime checks","Disables JS","Makes code faster"], answer:1 },
+  {
+     q:"Which converts string to number safely?", 
+     options:["+str","Number(str)","parseInt(str)","All of the above"], answer:3 },
+  {
+     q:"What value typeof null returns?", 
+     options:["'null'","'object'","'undefined'","'value'"], answer:1 },
+  {
+     q:"How to create an arrow function?", 
+     options:["() => {}", "function => {}", "=> function {}", "fn => ()"], answer:0 },
+  {
+     q:"Which array method returns a single value?",
+      options:["map()","filter()","reduce()","forEach()"], answer:2 },
+  {
+     q:"What does event delegation help with?",
+      options:["Performance by using single handler on parent","Makes events async","Copies events","Stops events"], answer:0 },
+  {
+     q:"What is the purpose of try/catch?",
+      options:["Looping","Error handling","Variable declaration","Promise resolution"], answer:1 },
+  {
+     q:"What does JSON.parse do?",
+      options:["Parse JSON string to object","Stringify object","Clone object","Validate JSON only"], answer:0 },
+  {
+     q:"Which method checks if array contains value?", 
+     options:["indexOf()","includes()","find()","some()"], answer:1 },
+  {
+     q:"Which keyword creates block scope?",
+      options:["var", "let","function","const"], answer:1 },
+  {
+     q:"What is hoisting in JS?",
+      options:["Variables and functions moved to top of scope at runtime","IO operation","Network request","Compiler optimization"], answer:0 },
+  {
+     q:"Which creates generator function?",
+      options:["function* name() {}", "async function name() {}", "gen function() {}", "function^ name() {}"], answer:0 }
 ];
 
 var advancedQuestions = [
-  { q:"What does [1,2,3].map(parseInt) produce?", options:["[1,2,3]","[NaN, NaN, NaN]","[1, NaN, NaN]","[1,2,3] with parseInt applied"], answer:2 },
-  { q:"Which returns first resolved/rejected in Promise.race?", options:["All resolved array","First settled promise","Never resolves","Array of results"], answer:1 },
-  { q:"What is tail call optimization?", options:["Optimization that reuses stack for tail calls","Loop optimization","Nothing in JS","Error handling"], answer:0 },
-  { q:"What is the result of 0.1+0.2===0.3?", options:["true","false","TypeError","undefined"], answer:1 },
-  { q:"Which structure allows weakly-held keys?", options:["Map","Object","WeakMap","Set"], answer:2 },
-  { q:"How to implement module import default?", options:["import X from 'm';","require('m')","import {X} from 'm';","export default X;"], answer:0 },
-  { q:"What is event loop's microtask queue used for?", options:["setTimeout callbacks","Promise callbacks (then/catch)","Rendering only","IO only"], answer:1 },
-  { q:"Which returns iterator for object entries?", options:["Object.entries(obj)","Object.keys(obj)","Object.values(obj)","obj.entries()"], answer:0 },
-  { q:"How to deep clone object with functions not lost?", options:["structuredClone","JSON.parse(JSON.stringify())","Object.assign","slice()"], answer:0 },
-  { q:"Which method prevents function from being called too often (throttle)?", options:["debounce","throttle","delay","bind"], answer:1 },
-  { q:"What is proxy used for?", options:["Intercept operations on objects","Proxy server","Performance boost","Style manipulation"], answer:0 },
-  { q:"Which makes code run asynchronously but sequentially (async/await)?", options:["Promise chaining","async/await","callbacks only","EventEmitter"], answer:1 },
-  { q:"What does Reflect.apply do?", options:["Applies function with arguments array","Reflects object keys","Creates new reflect object","No such method"], answer:0 },
-  { q:"What will 'this' be inside arrow function created inside object method?", options:["Lexical 'this' from outer scope","Object itself","Window/global","Undefined"], answer:0 },
-  { q:"Which allows zero-copy transfer between threads (Web Workers)?", options:["SharedArrayBuffer","JSON","postMessage string","localStorage"], answer:0 },
-  { q:"What is currying?", options:["Transform function with multiple args into chain of single-arg functions","Optimization","Cloning","Promise pattern"], answer:0 },
-  { q:"Which avoids main-thread blocking for heavy computation?", options:["Web Worker","setTimeout","requestAnimationFrame","localStorage"], answer:0 },
-  { q:"What is Symbol() used for?", options:["Unique property keys","String conversion","Number conversion","Array indexing"], answer:0 },
-  { q:"Which detects engine-specific features safely?", options:["Feature detection","Browser sniffing","UA string parse","Hardcode"], answer:0 },
-  { q:"Which is the best practice for memory leaks?", options:["Remove unused references, deregister events", "Ignore", "Keep global references", "Over-allocate"], answer:0 }
+  {
+     q:"What does [1,2,3].map(parseInt) produce?", 
+     options:["[1,2,3]","[NaN, NaN, NaN]","[1, NaN, NaN]","[1,2,3] with parseInt applied"], answer:2 },
+  {
+     q:"Which returns first resolved/rejected in Promise.race?",
+      options:["All resolved array","First settled promise","Never resolves","Array of results"], answer:1 },
+  {
+     q:"What is tail call optimization?", 
+     options:["Optimization that reuses stack for tail calls","Loop optimization","Nothing in JS","Error handling"], answer:0 },
+  {
+     q:"What is the result of 0.1+0.2===0.3?",
+      options:["true","false","TypeError","undefined"], answer:1 },
+  {
+     q:"Which structure allows weakly-held keys?",
+      options:["Map","Object","WeakMap","Set"], answer:2 },
+  {
+     q:"How to implement module import default?",
+      options:["import X from 'm';","require('m')","import {X} from 'm';","export default X;"], answer:0 },
+  {
+     q:"What is event loop's microtask queue used for?",
+      options:["setTimeout callbacks","Promise callbacks (then/catch)","Rendering only","IO only"], answer:1 },
+  {
+     q:"Which returns iterator for object entries?", 
+     options:["Object.entries(obj)","Object.keys(obj)","Object.values(obj)","obj.entries()"], answer:0 },
+  {
+     q:"How to deep clone object with functions not lost?",
+      options:["structuredClone","JSON.parse(JSON.stringify())","Object.assign","slice()"], answer:0 },
+  {
+     q:"Which method prevents function from being called too often (throttle)?",
+      options:["debounce","throttle","delay","bind"], answer:1 },
+  {
+     q:"What is proxy used for?",
+      options:["Intercept operations on objects","Proxy server","Performance boost","Style manipulation"], answer:0 },
+  {
+     q:"Which makes code run asynchronously but sequentially (async/await)?", 
+     options:["Promise chaining","async/await","callbacks only","EventEmitter"], answer:1 },
+  {
+     q:"What does Reflect.apply do?",
+      options:["Applies function with arguments array","Reflects object keys","Creates new reflect object","No such method"], answer:0 },
+  {
+     q:"What will 'this' be inside arrow function created inside object method?", 
+     options:["Lexical 'this' from outer scope","Object itself","Window/global","Undefined"], answer:0 },
+  {
+     q:"Which allows zero-copy transfer between threads (Web Workers)?",
+      options:["SharedArrayBuffer","JSON","postMessage string","localStorage"], answer:0 },
+  {
+     q:"What is currying?",
+      options:["Transform function with multiple args into chain of single-arg functions","Optimization","Cloning","Promise pattern"], answer:0 },
+  {
+     q:"Which avoids main-thread blocking for heavy computation?",
+      options:["Web Worker","setTimeout","requestAnimationFrame","localStorage"], answer:0 },
+  {
+     q:"What is Symbol() used for?", 
+     options:["Unique property keys","String conversion","Number conversion","Array indexing"], answer:0 },
+  {
+     q:"Which detects engine-specific features safely?",
+      options:["Feature detection","Browser sniffing","UA string parse","Hardcode"], answer:0 },
+  {
+     q:"Which is the best practice for memory leaks?",
+      options:["Remove unused references, deregister events", "Ignore", "Keep global references", "Over-allocate"], answer:0 }
 ];
 
 function pick20(pool) {
@@ -454,8 +576,6 @@ function showLeaderboard(difficulty, celebrate) {
   }
 }
 
-// ...existing code...
-
 // ---------------- CELEBRATION (15s) ----------------
 var _celebrationInterval = null;
 function startLongCelebration(durationMs) {
@@ -493,8 +613,6 @@ function showResult() {
     showLeaderboard(difficulty, false);
   }, 7000);
 }
-
-// ...existing code...
 
 // ---------------- START HANDLER ----------------
 startBtn.onclick = function() {
@@ -655,7 +773,6 @@ if (quizContainer) uiObserver.observe(quizContainer, { attributes:true, attribut
   }
 })();
 
-// Safe autoplay after first explicit click
 document.addEventListener('click', function enableMusicOnce() { try { window.fadeInMusic(); } catch (e) {} document.removeEventListener('click', enableMusicOnce); });
 
 // ---------------- RESET / PLAY AGAIN ----------------
