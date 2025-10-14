@@ -1,5 +1,3 @@
-// Full rewritten quiz.js — copy & paste to replace current file
-
 // ---------------- VARIABLES ----------------
 var startContainer = document.getElementById('start-container');
 var quizContainer = document.getElementById('quiz-container');
