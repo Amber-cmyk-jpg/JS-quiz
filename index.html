@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Javascript Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div id="lightning-overlay"></div>
+
+  <div id="start-container" class="centered-container" style="margin-top: 80px;">
+    <h1>Javascript Quiz</h1>
+    <input id="player-name" type="text" placeholder="Enter your name" maxlength="20" autocomplete="off" />
+    <div class="difficulty-row">
+      <button class="diff-btn" data-diff="beginner"><span>⚙️</span> Beginner</button>
+      <button class="diff-btn" data-diff="intermediate"><span>🔥</span> Intermediate</button>
+      <button class="diff-btn" data-diff="advanced"><span>⚡</span> Advanced</button>
+    </div>
+
+    <div class="hint">Or select difficulty then click <strong>Start Quiz</strong></div>
+    <div class="start-row">
+      <button id="start-btn" class="primary-btn">Start Quiz</button>
+      <button id="continue-btn" style="display:none;" class="secondary-btn">Continue Quiz</button>
+    </div>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div id="quiz-container" class="centered-container" style="display:none; margin-top:60px;">
+    <div class="timer-area">
+      <div id="timer-circle"><span id="timer-count">20:00</span></div>
+      <div class="progress-bar"><div class="progress"></div></div>
+    </div>
+
+    <div id="question" class="question"></div>
+    <ul id="options" class="options"></ul>
+
+    <audio id="bg-music" src="https://cdn.pixabay.com/audio/2022/10/16/audio_12b7b9b6e2.mp3" loop></audio>
+  </div>
+
+  <!-- Result Screen -->
+  <div class="result-screen hidden centered-container">
+    <div class="trophy" style="display:none;">🏆</div>
+    <h2 id="greeting"></h2>
+    <div id="score"></div>
+    <button id="restart-btn" class="primary-btn">Restart</button>
+  </div>
+
+  <!-- Leaderboard -->
+  <div id="leaderboard-container" class="centered-container" style="display:none;">
+    <h2>Leaderboard</h2>
+    <ol id="leaderboard-list"></ol>
+    <div class="share-row">
+      <button id="whatsapp-share" class="share-btn" title="Share to WhatsApp"><i class="fab fa-whatsapp"></i></button>
+      <button id="twitter-share" class="share-btn" title="Share to Twitter"><i class="fab fa-twitter"></i></button>
+      <button id="facebook-share" class="share-btn" title="Share to Facebook"><i class="fab fa-facebook-f"></i></button>
+    </div>
+    <button id="play-again-btn" class="primary-btn">Play Again</button>
+  </div>
+
+  <audio id="bg-music" preload="auto" loop>
+    <source src="https://cdn.pixabay.com/audio/2022/10/16/audio_12b7b9b6e2.mp3" type="audio/mpeg">
+    <source src="assets/audio/bg-music.mp3" type="audio/mpeg">
+  </audio>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
