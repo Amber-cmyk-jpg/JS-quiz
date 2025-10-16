@@ -576,7 +576,7 @@ function showLeaderboard(difficulty, celebrate) {
   }
 }
 
-// ---------------- CELEBRATION (15s) ----------------
+// ---------------- CELEBRATION (5s) ----------------
 var _celebrationInterval = null;
 function startLongCelebration(durationMs) {
   try { launchFullConfetti(); } catch (e) {}
@@ -979,7 +979,6 @@ function saveVolumeSetting(vol) {
     localStorage.setItem('musicVolume', String(vol));
   } catch (e) {}
 }
-
 // Fade in
 function fadeInMusic(targetVolume = musicVolume, duration = 1200) {
   if (!bgMusic) return;
@@ -998,7 +997,6 @@ function fadeInMusic(targetVolume = musicVolume, duration = 1200) {
   musicToggle.classList.add('active');
   musicToggle.innerHTML = '<i class="fa-solid fa-music"></i>';
 }
-
 // Fade out
 function fadeOutMusic(duration = 700) {
   if (!bgMusic) return;
