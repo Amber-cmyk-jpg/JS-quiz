@@ -611,7 +611,7 @@ function showResult() {
 
   setTimeout(function(){
     showLeaderboard(difficulty, false);
-  }, 7000);
+  }, 5000);
 }
 
 // ---------------- START HANDLER ----------------
